@@ -99,3 +99,20 @@ a:hover {
   color: orange;
   border-bottom: 1px solid orange;
 }
+
+
+@media (max-width: 700px) {
+
+  .background {
+    position: fixed;
+    bottom: auto;
+    height: 130px;
+  }
+
+  .content {
+    width: auto;
+    max-width: 1000px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
