@@ -1,0 +1,101 @@
+html {
+  font-family: "Karla", sans-serif;
+
+  color: #3a3a3a;
+}
+
+
+.background {
+
+  /* Position the background fixed to all four sides of the screen */
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  /* make the background image an image, and make it cover the size of the screen */
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+
+.content {
+
+  /* Make the content take up half of the screen horizontally, but not larger than 500px */
+  width: 30%;
+  max-width: 250px;
+
+  /* put a margin to the top and bottom of 100px, and center the content vertically */
+  margin: 130px auto;
+
+  /* put a border around the text content */
+  padding: 50px;
+
+  /* Make the content's background white */
+  background-color: white;
+
+  /* center align all of the text */
+  text-align: center;
+
+  /* make the corners rounded */
+  border-radius: 6px;
+
+  /* add a drop shadow, and make the background darker */
+  box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.25),
+              0px 0px 0px 1000px rgba(0,0,0,0.1);
+}
+
+div.photo {
+
+  /* make the photo an image, and make it cover the size of the photo */
+  background-image: url("woman.jpg");
+  background-size: cover;
+
+  /* Make this a 100px circle */
+  border-radius: 500px;
+  width: 200px;
+  height: 200px;
+
+  /* center this circle */
+  margin: auto;
+
+  /* make the image pop over the top of the panel */
+  margin-top: -130px;
+
+  /* add a white border and drop shadow to the photo */
+  box-shadow: 0px 2.5px 15px 0px rgba(0,0,0,0.3);
+
+  border: 4px solid white;
+
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  color: gray;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.links {
+  margin: 20px;
+}
+
+.link {
+  margin: 10px;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+  border-bottom: 1px solid tomato;
+}
+
+a:hover {
+  color: orange;
+  border-bottom: 1px solid orange;
+}
