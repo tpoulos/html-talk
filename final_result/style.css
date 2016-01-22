@@ -1,6 +1,7 @@
 html {
+  /* change the fonts for the whole page to Karla, a google webfont. See the head of index.html to see how the font is loaded */
   font-family: "Karla", sans-serif;
-
+  /* Set the color of the text to a custom color using a hex code */
   color: #3a3a3a;
 }
 
@@ -13,6 +14,9 @@ html {
   right: 0;
   top: 0;
   bottom: 0;
+
+  /* Make sure that the background is behind the content */
+  z-index: -1;
 
   /* make the background image an image, and make it cover the size of the screen */
   background-image: url("background.jpg");
@@ -41,9 +45,8 @@ html {
   /* make the corners rounded */
   border-radius: 6px;
 
-  /* add a drop shadow, and make the background darker */
-  box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.25),
-              0px 0px 0px 1000px rgba(0,0,0,0.1);
+  /* add a drop shadow */
+  box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.25);
 }
 
 div.photo {
@@ -66,19 +69,23 @@ div.photo {
   /* add a white border and drop shadow to the photo */
   box-shadow: 0px 2.5px 15px 0px rgba(0,0,0,0.3);
 
+  /* Add a white border around the photo */
   border: 4px solid white;
 
 }
 
 h1 {
+  /* Make the title all caps */
   text-transform: uppercase;
+  /* Space out the letters to make them look prettier */
   letter-spacing: 0.1em;
 }
 
 footer {
   color: gray;
   font-size: 12px;
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: -10px;
 }
 
 .links {
@@ -90,29 +97,45 @@ footer {
 }
 
 a {
+  /* yes, tomato is a valid color */
   color: tomato;
+
+  /* Remove the default text underline */
   text-decoration: none;
+
+  /* Add a nicer looking underline using border-bottom */
   border-bottom: 1px solid tomato;
 }
 
 a:hover {
+  /* When the user hovers over the links, change the color */
   color: orange;
   border-bottom: 1px solid orange;
 }
 
 
+
+/* on small screen sizes, get rid of the sheet of paper effect */
 @media (max-width: 700px) {
 
-  .background {
-    position: fixed;
-    bottom: auto;
-    height: 130px;
-  }
 
   .content {
+    /* make the content take up the full screen */
     width: auto;
     max-width: 1000px;
+
+    /* Remove the rounded corners and box shadow */
     border-radius: 0;
     box-shadow: none;
+
+
+    /* make the content a little lower on the screen, so that the backgorund photo shows through more. */
+    margin-top: 200px;
+  }
+
+  .background {
+    /* Although the bottom is still fixed on the screen, make it exactly 200px tall instead of going all the way to the bottom of the screen */
+    bottom: auto;
+    height: 300px;
   }
 }
